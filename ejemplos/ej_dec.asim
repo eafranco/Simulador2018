@@ -1,0 +1,15 @@
+#Carga en acumulador un valor 10 veces y termina
+ASP 10
+STA C
+ASP 5
+STA X
+ASP 1
+STA decremento
+regreso
+LDA X
+WD X
+LDA C
+SUB decremento
+STA C
+JGT regreso
+END

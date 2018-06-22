@@ -1,0 +1,7 @@
+#codigo con errores
+WD Z
+ADD x
+JEQ etiqueta
+WX Y
+etiqueta2
+FIN

@@ -1,0 +1,27 @@
+
+#Lee numero, si esta entre 5 y 10 imprime 
+#del 1 al numero leido
+NL
+ASP 5
+STA LI
+COMP LI
+ASP 10
+STA LS
+RD N
+LDA LI
+SUB N
+JGT J1
+LDA LS
+SUB N
+JLT J1
+ASP 1
+STA V
+LDA N
+J2
+WD N
+SUB V
+STA N
+JGT J2
+J1
+END
+

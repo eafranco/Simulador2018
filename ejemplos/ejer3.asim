@@ -1,0 +1,35 @@
+# Recibe un número entero N entre 0 y 16 e imprime lo que vale 2 a la N
+RD	N
+ASP	0
+STA	A
+ASP	16
+STA	B
+LDA	N
+COMP	A
+JLT	J1
+LDA	N
+COMP	B
+JGT	J1
+JSUB	F1
+J1	
+END	
+J2	
+WD	U
+END	
+F1	
+WD	N
+ASP	1
+STA	U
+STA	CONT
+LDA	N
+JEQ	J2
+J3	
+LDA	CONT
+ADD	CONT
+STA	CONT
+LDA	N
+SUB	U
+STA N
+JGT	J3
+WD	CONT
+END	

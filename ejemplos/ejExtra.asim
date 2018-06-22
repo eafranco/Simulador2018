@@ -1,0 +1,165 @@
+	ASP 0
+	M3
+	RD Init
+	ASP 1
+	STA Uno
+	LDA Init
+	COMP Uno
+	JEQ M1
+	ASP 2
+	STA Dos
+	LDA Init
+	COMP Dos
+	JEQ M2
+	J FIN
+	M1
+	JSUB S1
+	J M3
+	M2
+	JSUB S2
+	J M3
+	S1
+	ASP 7
+	STA a
+	ASP 6
+	STA b
+	ASP 4
+	STA c
+	ASP 11
+	STA d
+	ASP 13
+	STA e
+	ASP 1
+	STA f
+	ASP 2
+	STA g
+	ASP 3
+	STA h
+	ASP 5
+	STA i
+	ASP 8
+	STA j
+	ASP 9
+	STA k
+	ASP 10
+	STA L
+	RD x
+	ASP 5
+	COMP x
+	JEQ J1
+	ADD a
+	COMP b
+	JEQ J2
+	ADD j
+	COMP a
+	JEQ J3
+	ADD k
+	COMP x
+	JEQ J4
+	ADD d
+	COMP x
+	JEQ J5
+	ADD e
+	COMP x
+	JEQ J6
+	J1
+	WD f
+	WD g
+	WD h
+	WD c
+	WD i
+	J FIN1
+	J2
+	WD f
+	WD g
+	WD h
+	WD c
+	WD i
+	WD b
+	J FIN1
+	J3
+	WD f
+	WD g
+	WD h
+	WD c
+	WD i
+	WD b
+	WD a
+	J FIN1
+	J4
+	WD f
+	WD g
+	WD h
+	WD c
+	WD i
+	WD b
+	WD a
+	WD j
+	J FIN1
+	J5
+	WD f
+	WD g
+	WD h
+	WD c
+	WD i
+	WD b
+	WD a
+	WD j
+	WD k
+	J FIN1
+	J6
+	WD f
+	WD g
+	WD h
+	WD c
+	WD i
+	WD b
+	WD a
+	WD j
+	WD k
+	WD L
+	FIN1
+	RSUB
+	S2
+	RD x
+	ASP 2
+	STA D
+	ASP 2
+	STA i
+	ASP 1
+	STA U
+	ASN 1
+	STA ERROR
+	ASP 1
+	STA PRIM
+	LDA x
+	COMP D
+	JEQ T1
+	LDA x
+	DIV D
+	STA N
+	T2
+	LDA x
+	MOD i
+	JGT T3
+	WD ERROR
+	J FIN2
+	T3
+	LDA i
+	COMP N
+	STA rev
+	LDA i
+	ADD U
+	STA i
+	LDA rev
+	JLT T2
+	WD PRIM
+	J FIN2
+	T1
+	WD PRIM
+	J FIN2
+	FIN2
+	RSUB
+	FIN
+	END
+	

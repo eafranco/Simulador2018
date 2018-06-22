@@ -1,0 +1,27 @@
+#Llama a funcion para sumar dos numeros
+#y muestra el resultado
+
+RD A
+RD B
+LDA A
+PUSH 
+LDA B
+PUSH 
+JSUB SUMA
+POP 
+STA C
+WD C
+END
+SUMA
+POP 
+STA ret
+POP 
+STA BB
+POP 
+STA AA
+LDA AA
+ADD BB
+PUSH 
+LDA ret
+PUSH 
+RSUB

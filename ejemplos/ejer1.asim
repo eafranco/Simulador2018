@@ -1,0 +1,37 @@
+# Recibe un número entre 5 y 10 y luego imprime
+# de forma ascendente la secuencia de números: 1, 2, ... n-1, n
+RS	S1
+RS 	S2
+ASP	5
+STA	A
+ASP	10
+STA	B
+RD	N
+LDA	N
+COMP	A
+JLT	J1
+LDA	N
+COMP	B
+JGT	J2
+JSUB	F1
+END	
+J1	
+WS	S1
+END	
+J2	
+WS	S2
+END	
+F1	
+ASP	1
+STA	U
+STA	C
+J3	
+WD 	C
+LDA	C
+ADD	U
+STA	C
+LDA	N
+COMP	C
+JGT	J3
+WD 	N
+END

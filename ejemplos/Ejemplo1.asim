@@ -1,0 +1,7 @@
+RS  X
+RD  y
+LDA X
+ADD y
+STA z
+WD  z
+END

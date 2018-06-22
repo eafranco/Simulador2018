@@ -1,0 +1,38 @@
+# Recibe un entero N entre 1 y 25 e imprime los números de fibonacci
+# desde el primero hasta el N-ésimo
+RD	N
+ASP	1
+STA	U
+COMP	N
+JEQ	J1
+WD	U
+ASP	2
+STA	D
+COMP	N
+JEQ	J1
+WD	U
+LDA	N
+SUB	D
+STA	N
+LDA D
+SUB U
+STA D
+ASP	1
+STA	ANT
+JSUB	F1
+J1
+END	
+F1	
+LDA	N
+SUB	U
+JLT	J1
+STA	N
+LDA	D
+STA 	PIV
+ADD	ANT
+STA	D
+LDA	PIV
+STA	ANT
+WD	D
+JSUB	F1
+END

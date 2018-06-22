@@ -1,0 +1,11 @@
+RD a
+RD b
+LDA a
+SUB b
+STA c
+WD c
+
+WD a
+END
+WD b
+END

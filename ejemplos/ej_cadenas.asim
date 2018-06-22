@@ -1,0 +1,22 @@
+#Prueba lectura de cadenas y saltos
+RD x
+WD x
+LDA x
+PUSH 
+PUSH
+J cadenas
+RD x
+RD var1
+WD var1
+cadenas
+RS a
+WS a
+J fin
+RS b
+WS b
+fin
+POP
+POP
+STA x
+WD x
+END

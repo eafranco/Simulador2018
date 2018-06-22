@@ -1,0 +1,25 @@
+RD  n
+ASP 1
+STA x
+LDA a
+STA t
+SUB t
+STA c
+LDA t
+et2
+JEQ et
+STA t
+LDA c
+RD  b
+ADD b
+STA c
+LDA t
+SUB x
+et
+J   et2
+LDA c
+DIV n
+STA c
+WD c
+END
+
