@@ -4,10 +4,7 @@
 #include <QMessageBox>
 #include "proceso.h"
 #include "cpu.h"
-<<<<<<< HEAD
 #include "consolaproceso.h"
-=======
->>>>>>> 6613bffbc211c3331f3089d9e222c6dad30fa7ad
 
 class ControlSimulador
 {
@@ -24,11 +21,9 @@ public:
     int Ordenar(int parametroOrdenamiento);
     bool apagar;
     bool pausa;
-<<<<<<< HEAD
 	// ventana del proceso
 	ConsolaProceso *consola;
-=======
->>>>>>> 6613bffbc211c3331f3089d9e222c6dad30fa7ad
+
 
 };
 

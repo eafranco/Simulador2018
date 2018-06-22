@@ -75,13 +75,10 @@ private slots:
 
     void on_pushButton_13_clicked();                // Prueba de desempeño (CS)
 
-<<<<<<< HEAD
     void on_pushButton_12_clicked();                // Limpiar (GP)
 	
 	void on_pushButton_16_clicked();
-=======
-    void on_pushButton_12_clicked();                // Limpiar (GP)
->>>>>>> 6613bffbc211c3331f3089d9e222c6dad30fa7ad
+
 
     void iniciar();
 

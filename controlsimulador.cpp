@@ -7,15 +7,13 @@
 #include <stdio.h>
 #include <stdlib.h>     /* srand, rand */
 #include <time.h>       /* time */
-<<<<<<< HEAD
+
 #include <math.h>
 #include <ctime>
 #include "proceso.h"
 #include "cpu.h"
 #include "timers.h"
-=======
-#include <math.h>
->>>>>>> 6613bffbc211c3331f3089d9e222c6dad30fa7ad
+
 
 void delay2( int millisecondsToWait )
 {
@@ -52,7 +50,7 @@ ControlSimulador::~ControlSimulador()
  procesadores.clear();
 }
 
-<<<<<<< HEAD
+
 // Inicia ciclo de simulación con Round-Robin
 void ControlSimulador::RoundRobin()
 {
@@ -201,94 +199,7 @@ void ControlSimulador::SJF()
 	b.setNum((double)(clock() - tStart)/CLOCKS_PER_SEC); //It stops timer
 	consola->Display("Total running time with SJF:");				
 	consola->Display(b);	
-=======
-// Inicia ciclo de simulación con Round-Robin
-void ControlSimulador::RoundRobin()
-{
-    while( apagar==false && procesos.size()>=1){
-        if(pausa==false) {
-        for(int i=0; i<procesos.size(); i++) {
-            //esta con dos procesadores alternando ejecucion
-            procesadores[i%2]->ejecuta( procesos[i] );
-            if (apagar==true){
-                return;
-            }
 
-            if ( procesos[i]->estado == FINALIZADO ) {
-                delay2(4000);
-                delete procesos[i]; //liberar de memoria el proceso
-                procesos.remove(i); //quitar de la lista
-                i--;
-            }
-             delay2(5000);
-
-         }
-
-        }
-        delay2(5000);
-    }
-
-}
-
-//Inicia ciclo de simulación con FIFO
-void ControlSimulador::FIFO()
-{
-    while( apagar==false && procesos.size()>=1){
-
-        if (pausa==false){
-            for(int i=0; i<procesos.size(); i++){
-
-                //esta con dos procesadores alternando ejecucion
-                procesadores[i]->ejecuta( procesos[i] );
-
-                //Espera a que termine el proceso
-                while( procesos[i]->estado != FINALIZADO ){
-                    procesadores[i]->ejecuta( procesos[i] );
-                    if (apagar==true){
-                        return;
-                    }
-                }
-
-                delay2(4000);
-                delete procesos[i]; //liberar de memoria el proceso
-                procesos.remove(i); //quitar de la lista
-                i--;
-            }
-        }
-        delay2(5000);
-    }
-}
-
-//Inicia ciclo de simulación con SJF (Trabajo más corto primero)
-void ControlSimulador::SJF()
-{
-    int estado;
-    estado = Ordenar(0);
-
-    while( apagar == false && procesos.size()>=1){
-        if (pausa == false){
-            for(int i=0; i<procesos.size(); i++){
-
-                //esta con dos procesadores alternando ejecucion
-                procesadores[i]->ejecuta( procesos[i] );
-
-                //Espera a que termine el proceso
-                while( procesos[i]->estado != FINALIZADO){
-                    procesadores[i]->ejecuta( procesos[i] );
-                    if (apagar==true){
-                        return;
-                    }
-                }
-
-                delay2(4000);
-                delete procesos[i]; //liberar de memoria el proceso
-                procesos.remove(i); //quitar de la lista
-                i--;
-                }
-        }
-        delay2(5000);
-    }
->>>>>>> 6613bffbc211c3331f3089d9e222c6dad30fa7ad
 }
 
 int ControlSimulador::Ordenar(int parametroOrdenamiento){
@@ -345,7 +256,7 @@ void ControlSimulador::Prioridad()
         }
 
 
-<<<<<<< HEAD
+
 		estado = Ordenar(1);
 		consola = new ConsolaProceso();	
 		consola->setWindowTitle( QString("Priority Processing Times"));
@@ -391,31 +302,5 @@ void ControlSimulador::Prioridad()
 		b.setNum((double)(clock() - tStart)/CLOCKS_PER_SEC); //It stops timer
 		consola->Display("Total running time with Priority:");				
 		consola->Display(b);
-=======
-    estado = Ordenar(1);
 
-    while( apagar == false && procesos.size()>=1){
-        if (pausa == false){
-            for(int i=0; i<procesos.size(); i++){
-
-                //esta con dos procesadores alternando ejecucion
-                procesadores[i]->ejecuta( procesos[i] );
-
-                //Espera a que termine el proceso
-                while( procesos[i]->estado != FINALIZADO){
-                    procesadores[i]->ejecuta( procesos[i] );
-                    if (apagar==true){
-                        return;
-                    }
-                }
-
-                delay2(4000);
-                delete procesos[i]; //liberar de memoria el proceso
-                procesos.remove(i); //quitar de la lista
-                i--;
-                }
-        }
-        delay2(5000);
-    }
->>>>>>> 6613bffbc211c3331f3089d9e222c6dad30fa7ad
 }

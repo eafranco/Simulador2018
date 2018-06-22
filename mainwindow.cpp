@@ -35,11 +35,11 @@ void MainWindow::on_pushButton_clicked()
      QString filenameX = ui->listWidget_Process->currentItem()->toolTip();
 
     try{
-<<<<<<< HEAD
+
      simulador->procesos.push_back(new Proceso(filenameX, simulador->procesos, ui->comboBox_2->currentIndex()));
-=======
-     simulador->procesos.push_back(new Proceso(filenameX));
->>>>>>> 6613bffbc211c3331f3089d9e222c6dad30fa7ad
+
+    // simulador->procesos.push_back(new Proceso(filenameX));
+
     }
     catch(...){
        QMessageBox::information(this,"Error","Archivo no localizado, Proceso no creado");
@@ -311,15 +311,11 @@ void MainWindow::on_pushButton_22_clicked()
                ui->pushButton_15->setEnabled(true);
                ui->pushButton_21->setEnabled(true);
                ui->pushButton_6->setEnabled(true);
-<<<<<<< HEAD
+
                ui->pushButton_10->setEnabled(true);
 			   ui->pushButton_16->setEnabled(true);
-=======
-               ui->pushButton_10->setEnabled(true);
-
->>>>>>> 6613bffbc211c3331f3089d9e222c6dad30fa7ad
-           }
      }
+ }
 }
 
 //Crea nuevo archivo ASIM
@@ -407,12 +403,11 @@ void MainWindow::on_pushButton_6_clicked()
        ui->pushButton_15->setEnabled(false);
        ui->pushButton_21->setEnabled(false);
        ui->pushButton_6->setEnabled(false);
-<<<<<<< HEAD
+
        ui->pushButton_10->setEnabled(false);
 	   ui->pushButton_16->setEnabled(true);
-=======
+
        ui->pushButton_10->setEnabled(false);
->>>>>>> 6613bffbc211c3331f3089d9e222c6dad30fa7ad
 
       }
 }
@@ -612,12 +607,12 @@ if (ui->listWidget_LM->count()== 0){
     ui->pushButton_15->setEnabled(false);
     ui->pushButton_21->setEnabled(false);
     ui->pushButton_6->setEnabled(false);
-<<<<<<< HEAD
+
     ui->pushButton_10->setEnabled(false);
 	ui->pushButton_16->setEnabled(false);
-=======
+
     ui->pushButton_10->setEnabled(false);
->>>>>>> 6613bffbc211c3331f3089d9e222c6dad30fa7ad
+
     }
 }
 
@@ -630,19 +625,19 @@ void MainWindow::on_pushButton_12_clicked()
         ui->pushButton_5->setEnabled(false);
         ui->pushButton_8->setEnabled(false);
         ui->pushButton_9->setEnabled(false);
-<<<<<<< HEAD
+
         ui->pushButton_12->setEnabled(false);
 		ui->pushButton_16->setEnabled(false);
-=======
+
         ui->pushButton_12->setEnabled(false);
->>>>>>> 6613bffbc211c3331f3089d9e222c6dad30fa7ad
+
     }
 }
 
 
 void MainWindow::on_pushButton_13_clicked()
 {
-<<<<<<< HEAD
+
 	enSimulacion = true;
 	ui->pushButton_5->setEnabled(true);
 	ui->pushButton_8->setEnabled(true);
@@ -807,10 +802,7 @@ void MainWindow::on_pushButton_16_clicked()
 }
 
 
-=======
 
-}
->>>>>>> 6613bffbc211c3331f3089d9e222c6dad30fa7ad
 
 void MainWindow::iniciar(){
     enSimulacion=true;
@@ -832,8 +824,8 @@ void MainWindow::validar(){
         }
     }
 
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> 6613bffbc211c3331f3089d9e222c6dad30fa7ad
+
+
+

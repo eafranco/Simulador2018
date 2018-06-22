@@ -77,11 +77,11 @@ background-color:  qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rg
 }</string>
       </property>
       <property name="currentIndex">
-<<<<<<< HEAD
+
        <number>0</number>
-=======
+
        <number>1</number>
->>>>>>> 6613bffbc211c3331f3089d9e222c6dad30fa7ad
+
       </property>
       <property name="elideMode">
        <enum>Qt::ElideRight</enum>
@@ -2343,11 +2343,8 @@ background-color: rgb(255, 255, 204);
         </widget>
         <widget class="QPushButton" name="pushButton_13">
          <property name="enabled">
-<<<<<<< HEAD
           <bool>true</bool>
-=======
           <bool>false</bool>
->>>>>>> 6613bffbc211c3331f3089d9e222c6dad30fa7ad
          </property>
          <property name="geometry">
           <rect>
@@ -2364,7 +2361,7 @@ background-color: rgb(255, 255, 204);
           </font>
          </property>
          <property name="text">
-<<<<<<< HEAD
+
           <string>Demo Algorithms Test</string>
          </property>
         </widget>
@@ -2378,8 +2375,7 @@ background-color: rgb(255, 255, 204);
            <y>180</y>
            <width>131</width>
            <height>23</height>
-=======
-          <string>PRUEBA DE DESEMPEÑO</string>
+           </rect>
          </property>
         </widget>
         <widget class="QComboBox" name="comboBox_3">
@@ -2389,22 +2385,16 @@ background-color: rgb(255, 255, 204);
            <y>120</y>
            <width>191</width>
            <height>27</height>
->>>>>>> 6613bffbc211c3331f3089d9e222c6dad30fa7ad
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Arial</family>
-<<<<<<< HEAD
            <pointsize>7</pointsize>
           </font>
          </property>
          <property name="text">
           <string>User Algorithms Test</string>
-         </property>
-=======
-           <pointsize>10</pointsize>
-          </font>
          </property>
          <property name="currentText">
           <string>Perfomance test</string>
@@ -2427,7 +2417,7 @@ background-color: rgb(255, 255, 204);
            <string>Opcion 2</string>
           </property>
          </item>
->>>>>>> 6613bffbc211c3331f3089d9e222c6dad30fa7ad
+
         </widget>
        </widget>
        <widget class="QLabel" name="label_7">
@@ -2474,11 +2464,11 @@ background-color: rgb(255, 255, 204);
      <x>0</x>
      <y>0</y>
      <width>640</width>
-<<<<<<< HEAD
+
      <height>21</height>
-=======
+
      <height>25</height>
->>>>>>> 6613bffbc211c3331f3089d9e222c6dad30fa7ad
+
     </rect>
    </property>
    <widget class="QMenu" name="menuOpciones">

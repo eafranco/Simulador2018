@@ -22,12 +22,8 @@ SOURCES += main.cpp\
     statusmemory.cpp \
     asim.cpp \
     cpu.cpp \
-<<<<<<< HEAD
     showmem.cpp \
     hueco.cpp
-=======
-    showmem.cpp
->>>>>>> 6613bffbc211c3331f3089d9e222c6dad30fa7ad
 
 HEADERS  += mainwindow.h \
     controlsimulador.h \
@@ -39,12 +35,8 @@ HEADERS  += mainwindow.h \
     statusmemory.h \
     asim.h \
     cpu.h \
-<<<<<<< HEAD
     showmem.h \
     hueco.h
-=======
-    showmem.h
->>>>>>> 6613bffbc211c3331f3089d9e222c6dad30fa7ad
 
 FORMS    += mainwindow.ui \
     consolaproceso.ui \

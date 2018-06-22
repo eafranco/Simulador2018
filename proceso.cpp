@@ -1,14 +1,13 @@
 #include "proceso.h"
 #include "cpu.h"
-<<<<<<< HEAD
+
 #include "hueco.h"
-=======
->>>>>>> 6613bffbc211c3331f3089d9e222c6dad30fa7ad
+
 #include <stdio.h>
 
 int Proceso::cuenta=0;
 
-<<<<<<< HEAD
+
 bool processLessThan(Proceso *&p1, Proceso *&p2) {
     return p1->iniMem < p2->iniMem;
 }
@@ -22,8 +21,7 @@ bool fragmentMoreThan(Hole *&s1, Hole *&s2)
 {
     return s1->size() > s2->size();
 }
-=======
->>>>>>> 6613bffbc211c3331f3089d9e222c6dad30fa7ad
+
 
 /**
  * @brief Proceso::Proceso
@@ -32,11 +30,8 @@ bool fragmentMoreThan(Hole *&s1, Hole *&s2)
  * y acumula en memoriaOcupada (desde loadSML() )
  * @param nfile
  */
-<<<<<<< HEAD
+
 Proceso::Proceso(QString nfile, QVector<Proceso*> processList, int indiceUI)
-=======
-Proceso::Proceso(QString nfile)
->>>>>>> 6613bffbc211c3331f3089d9e222c6dad30fa7ad
 {
   //strcpy(nameFile,nfile);
   nameFile = nfile; //archivo con código maquina
@@ -59,11 +54,8 @@ Proceso::Proceso(QString nfile)
   consola->show();
 
   //al cargar el archivo se establecen limites de memoria y copian instrucciones
-<<<<<<< HEAD
+
   loadSML(processList, indiceUI); //carga en memoria de proceso el código ejecutable
-=======
-  loadSML(); //carga en memoria de proceso el código ejecutable
->>>>>>> 6613bffbc211c3331f3089d9e222c6dad30fa7ad
 
   ventanaEstado=new StatusMemory();
   ventanaEstado->recibeProceso( this ); //pasa referencia del proceso
@@ -80,11 +72,9 @@ Proceso::~Proceso()
 
 
 //carga archivo a memoria del proceso
-<<<<<<< HEAD
+
 void Proceso::loadSML(QVector<Proceso*> processList, int indiceUI) {
-=======
-void Proceso::loadSML() {
->>>>>>> 6613bffbc211c3331f3089d9e222c6dad30fa7ad
+
     //QString display;
     int curInst=0;
     char stemp[5];
@@ -108,7 +98,7 @@ void Proceso::loadSML() {
 
     codigoMem = new int[memAsignada]; //memoria total asignada al proceso
 
-<<<<<<< HEAD
+
     //*********************** PONER CODIGO AQUI ****************************
 
     //int indice_del_metodo = 1;
@@ -128,35 +118,8 @@ void Proceso::loadSML() {
     }
 
     //*********************TU CODIGO TERMINA AQUI***************************
-=======
 
-    iniMem = (id-1) * 200 ; //se asigna inicio segun ID ahorita (luego por algun metodo)
->>>>>>> 6613bffbc211c3331f3089d9e222c6dad30fa7ad
-
-    finMem = iniMem + memAsignada - 1; //ultima posicion valida de memoria
-    stackPointer = finMem;
-
-    if (finMem > CPU::mayorMemProceso)
-        CPU::mayorMemProceso=finMem;   //establece el valor de memoria mas alto usado por algun proceso
-
-    for(int k = 0; k<memAsignada; k++)
-        codigoMem[k] = 0; //inicializa memoria del proceso
-
-
-    do { //copia codigo de archivo a memoria del proceso
-        curInst = 0;
-        fscanf(smlFile, "%d", &curInst);
-        codigoMem[memPointer] = curInst;
-        memPointer++;
-    }while (!feof(smlFile));
-
-    memProcess = memPointer-1;
-
-    fclose(smlFile);
-    consola->Display("Programa cargado a la memoria del proceso\n");
-    memPointer = iniMem; 
 }
-<<<<<<< HEAD
 
 void Proceso::MejorAjuste(QVector<Proceso*> processList)
 {
@@ -347,5 +310,4 @@ void Proceso::PrimerAjuste(QVector<Proceso*> processList)
     this->iniMem = iniMem;
     }
 }
-=======
->>>>>>> 6613bffbc211c3331f3089d9e222c6dad30fa7ad
+

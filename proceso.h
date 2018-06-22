@@ -37,7 +37,6 @@ public:
     StatusMemory *ventanaEstado;
 
     //metodos
-<<<<<<< HEAD
     Proceso(QString nfile, QVector<Proceso*> processList, int indiceUI);
     ~Proceso();
     void loadSML(QVector<Proceso*> processList, int indiceUI);
@@ -45,11 +44,9 @@ public:
     void MejorAjuste(QVector<Proceso*> processList);
     void PeorAjuste(QVector<Proceso*> processList);
     void PrimerAjuste(QVector<Proceso*> processList);
-=======
     Proceso(QString nfile);
-    ~Proceso();
     void loadSML();
->>>>>>> 6613bffbc211c3331f3089d9e222c6dad30fa7ad
+
 
 };
 
