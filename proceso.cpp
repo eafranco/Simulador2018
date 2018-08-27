@@ -78,6 +78,7 @@ void Proceso::loadSML(QVector<Proceso*> processList, int indiceUI) {
     //QString display;
     int curInst=0;
     char stemp[5];
+    int j=0;
 
     consola->Display("Cargando: " + nameFile);
 
@@ -96,10 +97,12 @@ void Proceso::loadSML(QVector<Proceso*> processList, int indiceUI) {
 
     CPU::memoriaOcupada += memAsignada; //acumular memoria pedida
 
-    codigoMem = new int[memAsignada]; //memoria total asignada al proceso
+    codigoMem = new int[memAsignada];
+    //memoria total asignada al proceso, se copiua a la RAM al crear el proceso
 
 
-    //*********************** PONER CODIGO AQUI ****************************
+
+    //CALCULA EL INICIO DE LA MEMORIA PARA EL PROCESO, SEGUN EL METODO
 
     //int indice_del_metodo = 1;
     int selectedAlgUI = indiceUI;
@@ -117,7 +120,31 @@ void Proceso::loadSML(QVector<Proceso*> processList, int indiceUI) {
             break;
     }
 
-    //*********************TU CODIGO TERMINA AQUI***************************
+// COPIAR INSTRUCCIONES AL PROCESO E INICIAILIZAR
+    finMem = iniMem + memAsignada - 1; //ultima posicion valida de memoria
+    stackPointer = finMem;
+    memPointer = iniMem;
+
+   // if (finMem > CPU::mayorMemProceso)
+   //     CPU::mayorMemProceso=finMem;   //establece el valor de memoria mas alto usado por algun proceso
+
+     for(int k = 0; k<memAsignada; k++)
+        codigoMem[k] = 0; //inicializa memoria del proceso
+
+
+     do { //copia codigo de archivo a memoria del proceso
+
+         curInst = 0;
+          fscanf(smlFile, "%d", &curInst);
+          codigoMem[j] = curInst;
+          j++;
+      }while (!feof(smlFile));
+
+       memProcess = j-1;
+
+     fclose(smlFile);
+     consola->Display("Programa cargado a la memoria del proceso\n");
+
 
 }
 

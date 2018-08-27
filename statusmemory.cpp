@@ -1,6 +1,8 @@
 #include "statusmemory.h"
 #include "ui_statusmemory.h"
 
+#include <iostream>
+
 
 StatusMemory::StatusMemory(QWidget *parent) :
     QDialog(parent),

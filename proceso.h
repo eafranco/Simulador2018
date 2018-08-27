@@ -25,7 +25,8 @@ public:
     //--- al cargar archivo
     FILE * smlFile;
     QString nameFile;
-    int *codigoMem; //memoria interna para almacenar codigo
+    int *codigoMem; //memoria interna para almacenar codigo,
+    //NO EJECUTA DESDE AQUI SINO DE LA RAM EN EL CPU
     int iniMem;  //inicio de memoria asignada
     int finMem;  //fin de memoria asignada
     int memAsignada; //cantidad de memoria asignada
